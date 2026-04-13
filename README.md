@@ -1,3 +1,8 @@
+# Portfolio Risk Analysis in Python
+
+This project implements a structured portfolio risk analysis workflow in Python.  
+It covers both static and conditional risk models for measuring portfolio Value-at-Risk (VaR) and Expected Shortfall (ES), together with backtesting, multi-day risk analysis, and stress testing.
+
 ## Key findings
 
 - Normal VaR produces the lowest risk estimates and tends to be the least conservative.
@@ -7,15 +12,9 @@
 - Stress testing shows that portfolio downside risk is driven mainly by equity shocks.
 - Conditional methods such as GARCH-CCC and FHS-EWMA provide a more dynamic view of risk under changing volatility conditions.
 
-
 ## Example output
 
 ![VaR comparison](figures/final_analysis_2026_04_09/09_var_comparison.png)
-
-# Portfolio Risk Analysis in Python
-
-This project implements a structured portfolio risk analysis workflow in Python.  
-It covers both static and conditional risk models for measuring portfolio Value-at-Risk (VaR) and Expected Shortfall (ES), together with backtesting, multi-day risk analysis, and stress testing.
 
 ## Project objective
 
@@ -76,7 +75,7 @@ The portfolio uses the following fixed weights:
 ## Folder overview
 
 - `code/` → Python scripts
-- `data/` → raw and final datasets
+- `data/` → raw input data and rebuilt working dataset
 - `figures/` → generated plots
 - `results/` → generated result tables
 

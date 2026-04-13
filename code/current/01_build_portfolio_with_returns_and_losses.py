@@ -1,12 +1,14 @@
 import pandas as pd
+import os
 
-# =========================
 # 01_build_portfolio_with_returns_and_losses.py
-# =========================
 
 BASE_PATH = "/Users/aaronroman/Desktop/QFRM"
-DATA_PATH = f"{BASE_PATH}/Datasets"
-OUTPUT_PATH = f"{BASE_PATH}/final_analysis_2026_04_09"
+DATA_PATH = f"{BASE_PATH}/data/raw"
+OUTPUT_PATH = f"{BASE_PATH}/data/final_analysis_2026_04_09"
+
+os.makedirs(OUTPUT_PATH, exist_ok=True)
+
 
 # Load final portfolio return dataset
 df = pd.read_csv(f"{DATA_PATH}/portfolio_returns_clean.csv")
@@ -50,7 +52,7 @@ df["portfolio_loss_eur"] = -V * df["portfolio_return"]
 df.to_csv(f"{OUTPUT_PATH}/01_portfolio_with_returns_and_losses.csv", index=False)
 
 print("Rebuilt file saved:")
-print(f"{DATA_PATH}/portfolio_with_returns_and_losses.csv")
+print(f"{OUTPUT_PATH}/01_portfolio_with_returns_and_losses.csv")
 print(df[[
     "Date", "portfolio_return", "portfolio_loss_pct", "portfolio_loss_eur"
 ]].head())

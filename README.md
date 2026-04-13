@@ -1,3 +1,13 @@
+## Key findings
+
+- Normal VaR produces the lowest risk estimates and tends to be the least conservative.
+- Student-t and Historical Simulation generate higher VaR and ES estimates, reflecting heavier tails and realized extreme losses.
+- VaR violations cluster strongly during stress periods, especially around 2020.
+- Multi-day VaR shows that square-root-of-time scaling is a useful benchmark, but it becomes less accurate at longer horizons.
+- Stress testing shows that portfolio downside risk is driven mainly by equity shocks.
+- Conditional methods such as GARCH-CCC and FHS-EWMA provide a more dynamic view of risk under changing volatility conditions.
+
+
 ## Example output
 
 ![VaR comparison](figures/final_analysis_2026_04_09/09_var_comparison.png)
@@ -87,16 +97,6 @@ The portfolio uses the following fixed weights:
 - Stress-testing outputs
 - GARCH-CCC parameter and matrix outputs
 - Final method comparison table
-
-## Key findings
-
-- Normal VaR produces the lowest risk estimates and tends to be the least conservative.
-- Student-t and Historical Simulation generate higher VaR and ES estimates, reflecting heavier tails and realized extreme losses.
-- VaR violations cluster strongly during stress periods, especially around 2020.
-- Multi-day VaR shows that square-root-of-time scaling is a useful benchmark, but it becomes less accurate at longer horizons.
-- Stress testing shows that portfolio downside risk is driven mainly by equity shocks.
-- Conditional methods such as GARCH-CCC and FHS-EWMA provide a more dynamic view of risk under changing volatility conditions.
-
 
 ## How to run
 
